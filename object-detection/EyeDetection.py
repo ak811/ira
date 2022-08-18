@@ -34,8 +34,12 @@ def live_detection_by_camera():
     cv2.destroyAllWindows()
 
 
-einstein = cv2.imread('data/albert_einstein.jpg', 0)
-eye_cascade = cv2.CascadeClassifier('data/haarcascades/haarcascade_eye.xml')
+einstein = cv2.imread('../data/albert_einstein.jpg', 0)
+
+eye_cascade = cv2.CascadeClassifier('../data/haarcascades/haarcascade_eye.xml')
+
+plt.imshow(einstein, cmap='gray')
+plt.show()
 
 result = detect_eyes(einstein)
 plt.imshow(result, cmap='gray')
