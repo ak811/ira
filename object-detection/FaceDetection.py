@@ -6,17 +6,6 @@ import matplotlib.pyplot as plt
 def detect_face(img):
     face_img = img.copy()
 
-    face_rects = face_cascade.detectMultiScale(face_img)
-
-    for (x, y, w, h) in face_rects:
-        cv2.rectangle(face_img, (x, y), (x + w, y + h), (255, 255, 255), 10)
-
-    return face_img
-
-
-def adj_detect_face(img):
-    face_img = img.copy()
-
     face_rects = face_cascade.detectMultiScale(face_img, scaleFactor=1.07, minNeighbors=5)
 
     for (x, y, w, h) in face_rects:
@@ -45,16 +34,24 @@ def live_detection_by_camera():
     cv2.destroyAllWindows()
 
 
-einstein = cv2.imread('data/albert_einstein.jpg', 0)
-solvay_conference = cv2.imread('data/solvay_conference.jpg', 0)
+einstein = cv2.imread('../data/albert_einstein.jpg', 0)
+solvay_conference = cv2.imread('../data/solvay_conference.jpg')
 
-face_cascade = cv2.CascadeClassifier('data/haarcascades/haarcascade_frontalface_alt.xml')
+face_cascade = cv2.CascadeClassifier('../data/haarcascades/haarcascade_frontalface_alt.xml')
 
-# plt.imshow(einstein, cmap='gray')
-# plt.show()
+plt.imshow(einstein, cmap='gray')
+plt.show()
 
-result = adj_detect_face(solvay_conference)
+result = detect_face(einstein)
 plt.imshow(result, cmap='gray')
+plt.show()
+
+solvay_conference = cv2.cvtColor(solvay_conference, cv2.COLOR_RGB2BGR)
+plt.imshow(solvay_conference)
+plt.show()
+
+result = detect_face(solvay_conference)
+plt.imshow(result)
 plt.show()
 
 live_detection_by_camera()
