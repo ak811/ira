@@ -1,25 +1,24 @@
 # Computer Vision
 
 ## Face Detection
+<img src="data/albert_einstein_subplot.png"/>
 <br>
-![alt text](https://github.com/ak811/computer-vision/blob/master/data/albert_einstein_subplot.png?raw=true)
+<img src="data/solvay_conference_face_plot.png"/>
+<img src="data/solvay_conference_plot_face_detected.png"/>
 <br>
-<br>
-![alt text](https://github.com/ak811/computer-vision/blob/master/data/solvay_conference_face_plot.png?raw=true)
-![alt text](https://github.com/ak811/computer-vision/blob/master/data/solvay_conference_plot_face_detected.png?raw=true)
 <br>
 
 ## Eye Detection
+<img src="data/albert_einstein_eye_plot.png"/>
 <br>
-![alt text]https://github.com/ak811/computer-vision/blob/master/data/albert_einstein_eye_plot.png?raw=true)
 <br>
 
 ## Edge Detection
+<img src="data/cat_edge_plot.png"/>
 <br>
-![alt text](https://github.com/ak811/computer-vision/blob/master/data/cat_edge_plot.png?raw=true)
 <br>
 
 ## Template Maching
+<img src="data/template_maching_plot.png"/>
 <br>
-![alt text](https://github.com/ak811/computer-vision/blob/master/data/template_maching_plot.png?raw=true)
 <br>
