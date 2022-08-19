@@ -9,14 +9,14 @@ plt.show()
 
 # Trying to find best value for threshold in Canny:
 med_val = np.median(img)
-lower = int(max(0, 0.2 * med_val))
-upper = int(min(255, 1.9 * med_val))
+lower = int(max(0, 0.7 * med_val))
+upper = int(min(255, 1.3 * med_val))
 edges = cv2.Canny(image=img, threshold1=lower, threshold2=upper)
 plt.imshow(edges)
 plt.show()
 
 # sometimes in order to not picking up minor edges, it's better to blur the image
-blurred_img = cv2.blur(img, ksize=(1, 1))
+blurred_img = cv2.blur(img, ksize=(2, 2))
 edges = cv2.Canny(image=blurred_img, threshold1=lower, threshold2=upper)
 plt.imshow(edges)
 plt.show()
