@@ -21,8 +21,12 @@ Ira is a free and open-source real-time keypoint detection library based on [Ope
   ```
   * Install [Matplotlib](https://github.com/matplotlib/matplotlib):
   ```
-  pip install -U matplotlib
+  pip install matplotlib
   ```
+  * Install [NumPy](https://github.com/numpy/numpy):
+  ```
+  pip install numpy
+  ```  
 #### 3. You're ready to go!
   ```
   * The documentations will be provided soon.
@@ -30,6 +34,30 @@ Ira is a free and open-source real-time keypoint detection library based on [Ope
   
 <!-- View Documentation -->
 
+<br>
+
+## How it is real-time?
+#### Use the following function in every python class you want to use detection methods. It will open your device's webcam and detect the keypoints you mentioned in the function.
+ ~~~python
+def live_detection_by_camera():
+    cap = cv2.VideoCapture(0)
+
+    while True:
+
+        ret, frame = cap.read(0)
+
+        frame = detect_face(frame)
+
+        cv2.imshow('Video Face Detection', frame)
+
+        c = cv2.waitKey(1)
+        # Esc key
+        if c == 27:
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+  ~~~
 
 <br>
 
