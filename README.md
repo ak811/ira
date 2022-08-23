@@ -5,7 +5,7 @@
 <br>
 
 ## Overview
-Ira is a free and open-source real-time keypoint detection library based on [OpenCV](https://github.com/opencv/opencv) written in the Python programming language. It allows the development of keypoint detection applications for face, eyes, edge estimation and more!
+Ira is a free and open-source real-time keypoint detection library based on [OpenCV](https://github.com/opencv/opencv) written in the Python programming language. It allows the development of keypoint detection applications for face, eyes, edge estimation, and more!
 
 <br>
 
