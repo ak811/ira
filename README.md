@@ -36,7 +36,7 @@ Ira is a free and open-source real-time keypoint detection library based on [Ope
 
 <br>
 
-## How it is real-time?
+## Real-Time Object Detection
 #### Use the following function in every python class you want to use detection methods. It will open your device's webcam and detect the keypoints you mentioned in the function.
  ~~~python
 def live_detection_by_camera():
